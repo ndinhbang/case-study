@@ -91,7 +91,8 @@
  5. Now we can install several most common PHP modules
  
     ```
-    yum install php php-common php-devel php-opcache php-cli php-mcrypt php-mbstring php-bcmath php-json php-mysql php-event php-zip php-xml php-xmlrpc
+    yum install php php-common php-devel php-opcache php-cli php-mcrypt php-mbstring php-bcmath php-json php-mysqlnd
+     php-event php-zip php-xml php-xmlrpc
     ```
     
-    
+ 
