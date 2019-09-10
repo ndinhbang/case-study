@@ -6,7 +6,7 @@ _After LAMP stack already installed, we can begin right away with installing the
 
     `yum install epel-release`
     
-2. install the phpMyAdmin package
+2. Install the phpMyAdmin package
 
     `yum install phpmyadmin`
     
@@ -36,8 +36,7 @@ _After LAMP stack already installed, we can begin right away with installing the
 
     `systemctl restart httpd.service`
     
-   To access the interface, go to your server’s domain name or public IP address followed by `/phpMyAdmin` as
-    changed above
+   To access the interface, go to your server’s domain name or public IP address followed by `/phpMyAdmin` 
    , in your web browser
    
    `http://server_domain_or_IP/phpMyAdmin`
