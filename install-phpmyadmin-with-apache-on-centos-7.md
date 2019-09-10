@@ -14,7 +14,7 @@ _After LAMP stack already installed, we can begin right away with installing the
 
     `vi /etc/httpd/conf.d/phpMyAdmin.conf`
     
-4. Comment out some lines, to enable connection from outside and change 
+4. Comment out some lines, to enable connection from outside
 
     ```
    ...
@@ -83,7 +83,7 @@ _After LAMP stack already installed, we can begin right away with installing the
    
    `systemctl restart httpd.service`
    
-   Now that we have the override directive in our configuration, Apache will look for a file called `.htaccess` within the `/usr/share/phpMyAdmi`n directory. If it finds one, it will use the directives contained within to supplement its previous configuration data.
+   Now that we have the override directive in our configuration, Apache will look for a file called `.htaccess` within the `/usr/share/phpMyAdmin` directory. If it finds one, it will use the directives contained within to supplement its previous configuration data.
    
    Our next step is to create the .htaccess file within that directory
    
