@@ -24,7 +24,7 @@ Có nhiều cách sử dụng session:
  việc truyền qua lại session ID giữa các trang web, thường sử dụng với các trình duyệt web (web browser) không sử dụng được cookie
 
     ```
-    http://localhost/bai-viet?sessionid=06383951600dd0fc8713fafd63142fce
+    http://example.com/bai-viet?sessionid=06383951600dd0fc8713fafd63142fce
     ```
 
 - **Cách 2**: Lưu session ID trong cookie. 
