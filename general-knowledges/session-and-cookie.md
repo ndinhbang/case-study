@@ -10,7 +10,9 @@ request hiện tại không thể sử dụng các thông tin từ các request 
 
 Session (hay còn gọi là phiên làm việc) là một cách giao tiếp giữa webserver và client (có thể là trình duyệt web hay ứng dụng trên thiết bị của bạn).
 
-Một session bắt đầu khi client gửi request tới webserver, **chỉ kết thúc khi hết thời gian timeout hoặc khi bạn đóng trình duyệt hoặc ứng dụng**. Giá trị của session sẽ được **lưu trong một tệp tin trên webserver**.
+Một session bắt đầu khi client gửi request tới webserver, **chỉ kết thúc khi hết thời gian timeout hoặc khi bạn đóng 
+trình duyệt hoặc ứng dụng**. Giá trị của session mặc định sẽ được **lưu trong một tệp tin trên webserver**. Ngoài ra,
+ session có thể được lưu trong database, redis, ... tùy theo ý đồ của người lập trình.
 Chỉ nên lưu trữ những thông tin tạm thời trên session, ví dụ: thông tin đăng nhập, thông tin giỏ hàng, ...
 
 Mỗi session được cấp phát một mã số định danh duy nhất là Sesion ID. Session ID là **một chuỗi ngẫu nhiên 32 kí tự**,
