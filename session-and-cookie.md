@@ -36,7 +36,8 @@ Có nhiều cách sử dụng session:
 
 Cookie là một đoạn dữ liệu được truyền từ webserver tới client, được **lưu trữ tại thiết bị của người dùng** khi bạn bắt đầu truy cập vào ứng dụng (website). **Từ các lần request sau cookie sẽ được tự động đính kèm vào request gửi ngược lại webserver**.
 
-Vì cookie được lưu dưới trình duyệt người dùng nên nó không bảo mật, vì thế **để bảo mật, các dữ liệu như sessionId sẽ được mã hóa** trước khi lưu vào cookie và gửi xuống trình duyệt phía người dùng.
+Vì cookie được lưu dưới trình duyệt người dùng nên nó không bảo mật, **để bảo mật, các dữ liệu sẽ được mã hóa** trước
+ khi lưu vào cookie và gửi xuống trình duyệt phía người dùng.
 
 Dung lượng tối đa của 1 cookie là **4KB** và được **lưu trong một khoản thời gian nhất định** - Expires / Max-Age.
 
