@@ -2,7 +2,7 @@
 
 ### Session 
 
-HTTP là một giao thức  trạng thái (**stateless protocol**), mỗi request từ client tới webserver là độc lập, vì vậy 
+HTTP là một giao thức phi trạng thái (**stateless protocol**), mỗi request từ client tới webserver là độc lập, vì vậy 
 request hiện tại không thể sử dụng các thông tin từ các request trước đó. Điều này có nghĩa là **không có cách nào để
  ghi nhớ danh tính (identity) của một người dùng từ trang này qua trang khác**. Vì vậy, các ứng dụng web 
  (web applications) yêu cầu người dùng phải đăng nhập sử dụng 1 **session**. Dựa vào session thì webserver có thể
