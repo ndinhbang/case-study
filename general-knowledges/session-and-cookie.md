@@ -18,7 +18,7 @@ Mỗi session được cấp phát một mã số định danh duy nhất là Se
 
 Có nhiều cách sử dụng session:
 
-- **Cách 1**: Truyền Session ID giữa các trang web thông qua query string. 
+- **Cách 1**: Truyền Session ID giữa các trang web thông qua query string trên URL. 
 
     Ít được sử dụng vì mất công xử lý
  việc truyền qua lại session ID giữa các trang web, thường sử dụng với các trình duyệt web (web browser) không sử dụng được cookie
