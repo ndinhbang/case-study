@@ -13,7 +13,7 @@ Một session bắt đầu khi client gửi request tới webserver, **chỉ k�
 Chỉ nên lưu trữ những thông tin tạm thời trên session, ví dụ: thông tin đăng nhập, thông tin giỏ hàng, ...
 
 Mỗi session được cấp phát một mã số định danh duy nhất là Sesion ID. Session ID là **một chuỗi ngẫu nhiên 32 kí tự**,
- ví dụ: _06383951600dd0fc8713fafd63142fce_
+ ví dụ: _`06383951600dd0fc8713fafd63142fce`_
 
 Có nhiều cách sử dụng session:
 
