@@ -95,4 +95,24 @@
      php-event php-zip php-xml php-xmlrpc
     ```
     
+ #### Install `libsodium`
  
+ 1. Install both the library and PHP extension
+  
+   ```
+    yum install libsodium-devel
+    yum install php-sodium
+   ```
+    
+ 2. Verify that you have the correct version of `libsodium` installed
+ 
+   
+   ```
+    <?php
+    var_dump([
+        SODIUM_LIBRARY_MAJOR_VERSION,
+        SODIUM_LIBRARY_MINOR_VERSION,
+        SODIUM_LIBRARY_VERSION
+    ]);
+  ```
+  
