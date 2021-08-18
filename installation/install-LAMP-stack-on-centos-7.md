@@ -16,12 +16,14 @@
    ```
    
 #### Install MySQL
+https://tecadmin.net/install-mysql-8-on-centos/
 
 1. Enable the MySQL 5.7/8.0 repository with the following command
 
    ```
    yum localinstall https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
    yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
+   rpm -Uvh https://repo.mysql.com/mysql80-community-release-el7-3.noarch.rpm
    ```
     
 2. Install MySQL package with yum 
@@ -81,14 +83,21 @@
     `yum install yum-utils`
  
  4. Enable Remi repository as the default repository for installing different PHP versions
+
+ 5. Disable previous repo 
+    ```
+    yum-config-manager --disable 'remi-php*'
+    ```
  
     ```
     yum-config-manager --enable remi-php71
     yum-config-manager --enable remi-php72
     yum-config-manager --enable remi-php73
+    yum-config-manager --enable remi-php74
+    yum-config-manager --enable remi-php80
     ```
  
- 5. Now we can install several most common PHP modules
+ 6. Now we can install several most common PHP modules
  
     ```
     yum install php php-common php-devel php-opcache php-cli php-mcrypt php-mbstring php-bcmath php-json php-mysqlnd
