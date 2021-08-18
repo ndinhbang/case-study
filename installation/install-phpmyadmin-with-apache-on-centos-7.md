@@ -14,24 +14,6 @@ _After LAMP stack already installed, we can begin right away with installing the
 
     `vi /etc/httpd/conf.d/phpMyAdmin.conf`
     
-4. Comment out some lines, to enable connection from outside
-
-    ```
-   ...
-    <Directory /usr/share/phpMyAdmin/>
-        AddDefaultCharset UTF-8
-    
-        <IfModule mod_authz_core.c>
-        # Apache 2.4
-        # <RequireAny>
-            # Require ip 127.0.0.1
-            # Require ip ::1
-        # </RequireAny>
-        Require all granted
-        </IfModule>
-   ...
-   </Directory>
-    ```
 5. Restart the Apache web server to implement your modifications
 
     `systemctl restart httpd.service`
