@@ -345,3 +345,8 @@ Verify the installation by printing the Yarn version number:
 ```bash
 yarn --version
 ```
+
+## References
+
+<https://devdojo.com/bobbyiliev/how-to-speed-up-your-laravel-application-with-php-opcache>
+<https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories>
