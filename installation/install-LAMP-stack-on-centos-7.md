@@ -82,13 +82,12 @@ https://tecadmin.net/install-mysql-8-on-centos/
  
     `yum install yum-utils`
  
- 4. Enable Remi repository as the default repository for installing different PHP versions
-
- 5. Disable previous repo 
+ 4. Disable previous repo 
     ```
     yum-config-manager --disable 'remi-php*'
     ```
- 
+    
+ 5. Enable Remi repository as the default repository for installing different PHP versions
     ```
     yum-config-manager --enable remi-php71
     yum-config-manager --enable remi-php72
