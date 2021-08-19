@@ -17,6 +17,111 @@
    systemctl enable httpd
    ```
 
+   To list all enabled virtual hosts on the web server
+
+   ```bash
+   httpd -S
+   ```
+
+### Secure webserver
+
+#### Install `mod_security`
+
+   ```bash
+   yum install mod_security
+   ```
+
+   Edit ModSecurity configuration file `/etc/httpd/conf.d/mod_security.conf` and look for the `SecRuleEngine` Directive on the File and configured with the Desired Value.
+
+- **On** - Rules are activated
+- **Off** - Rules are Deactivated
+- **DetectionOnly** - Only Intercepts and logs Transactions
+
+```bash
+SecRuleEngine On
+SecStatusEngine On
+```
+
+Important files to Remember
+
+```bash
+#Mod Security Config File 
+vi /etc/httpd/conf.d/mod_security.conf
+#Debug Log 
+vi /var/log/httpd/modsec_debug.log
+#Audit log 
+vi /var/log/httpd/modsec_audit.log
+#Rules 
+vi /etc/httpd/modsecurity.d/activated_rules
+```
+
+#### Hide server info
+
+To hide web server version number, server operating system details, installed Apache modules and more, open your Apache web server configuration file
+
+   ```bash
+   #RHEL/CentOS
+   vi /etc/httpd/conf/httpd.conf
+   #Debian/Ubuntu
+   vi /etc/apache2/apache2.conf    
+   ```
+
+   Add or edit those lines:
+
+   ```bash
+   ServerTokens Full
+   # You have to install `mod_security` first
+   SecServerSignature "<name as you wish>"
+   ```
+
+   then check if apache configuration is valid
+
+   ```bash
+   apachectl configtest
+   service httpd restart
+   ```
+
+#### Install ssl
+
+   ```bash
+   yum install mod_ssl openssl
+   ```
+
+   open `/etc/httpd/conf.d/ssl.conf`
+
+   and edit as in <https://ssl-config.mozilla.org/>
+
+#### Install `let's encrypt` ssl certificate
+
+Install certbot for apache
+
+```bash
+yum install epel-release yum-utils
+yum install certbot-apache
+```
+
+Run `certbot` to start
+
+```bash
+certbot
+```
+
+then do as instruction.
+
+to test your ssl, go to <https://www.ssllabs.com/ssltest>
+
+##### Automatic renew certificate use `crontab`
+
+```bash
+crontab -e
+```
+
+then paste this line, to renew **every 12h**
+
+```bash
+* */12 * * * /usr/bin/certbot renew >/dev/null 2>&1
+```
+
 ## Install MySQL
 
 <https://tecadmin.net/install-mysql-8-on-centos/>
