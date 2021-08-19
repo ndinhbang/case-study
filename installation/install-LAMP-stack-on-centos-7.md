@@ -247,6 +247,24 @@ then paste this line, to renew **every 12h**
     php -m
    ```
 
+### Remove `x-powered-by`
+
+   ```bash
+   vi /etc/php.ini
+   ```
+
+   Find the following line.
+
+   ```bash
+   expose_php = off
+   ```
+
+   then restart apache
+
+   ```bash
+   service httpd restart
+   ```
+
 ## Install `redis`
 
 <https://www.howtoforge.com/how-to-install-and-secure-redis-on-centos-7/>
