@@ -4,10 +4,6 @@ Here is **JBang cheatsheet**
 
 Install JBang on Linux
 
-curl -Ls https://sh.jbang.dev | bash -s - app setup
-
-curl -Ls https://sh.jbang.dev | bash -s - app setup
-
 ```
 curl -Ls https://sh.jbang.dev | bash -s - app setup
 ```
