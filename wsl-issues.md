@@ -1,4 +1,4 @@
-### tìm tới thư mục chứ vhd
+### Tìm tới thư mục chứ vhd
 https://learn.microsoft.com/en-us/windows/wsl/disk-space#how-to-locate-the-vhdx-file-and-disk-path-for-your-linux-distribution
 
 thường có dạng: `%LOCALAPPDATA%\Packages\<PackageFamilyName>\LocalState\<disk>.vhdx`
