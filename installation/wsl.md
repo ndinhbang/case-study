@@ -33,3 +33,12 @@ https://learn.microsoft.com/en-us/windows/wsl/disk-space#manual-expansion
 
 # optimize VHD
 https://github.com/microsoft/WSL/issues/4699#issuecomment-627133168
+
+
+# wsl ip
+```
+# run it on on windows
+wsl -- ip -o -4 -json addr list eth0
+# run it within wsl
+ip addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
+```
